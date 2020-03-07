@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  microservices.calculadordejuros.webapi:
+    image: ${DOCKER_REGISTRY-}microservicescalculadordejuroswebapi
+    build:
+      context: .
+      dockerfile: Microservices.CalculadorDeJuros.WebApi/Dockerfile

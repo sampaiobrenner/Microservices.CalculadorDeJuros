@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.CalculadorDeJuros.WebApi", "Microservices.CalculadorDeJuros.WebApi\Microservices.CalculadorDeJuros.WebApi.csproj", "{32107769-A495-4245-9056-E7031D691422}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.CalculadorDeJuros.WebApi", "Microservices.CalculadorDeJuros.WebApi\Microservices.CalculadorDeJuros.WebApi.csproj", "{32107769-A495-4245-9056-E7031D691422}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.CalculadorDeJuros.Services", "Microservices.CalculadorDeJuros.Services\Microservices.CalculadorDeJuros.Services.csproj", "{27818912-3D1C-4E81-A40E-682F30BA2551}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.CalculadorDeJuros.Repositories", "Microservices.CalculadorDeJuros.Repositories\Microservices.CalculadorDeJuros.Repositories.csproj", "{43673221-8714-44ED-8258-A93DE684815C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.CalculadorDeJuros.Entities", "Microservices.CalculadorDeJuros.Entities\Microservices.CalculadorDeJuros.Entities.csproj", "{77E86148-8792-4883-9529-C966829AB2A3}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{54670AA9-AEE4-47CB-8260-1FABFAF9AB3D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,22 @@ Global
 		{32107769-A495-4245-9056-E7031D691422}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32107769-A495-4245-9056-E7031D691422}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32107769-A495-4245-9056-E7031D691422}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27818912-3D1C-4E81-A40E-682F30BA2551}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27818912-3D1C-4E81-A40E-682F30BA2551}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27818912-3D1C-4E81-A40E-682F30BA2551}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27818912-3D1C-4E81-A40E-682F30BA2551}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43673221-8714-44ED-8258-A93DE684815C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43673221-8714-44ED-8258-A93DE684815C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43673221-8714-44ED-8258-A93DE684815C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43673221-8714-44ED-8258-A93DE684815C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77E86148-8792-4883-9529-C966829AB2A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77E86148-8792-4883-9529-C966829AB2A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77E86148-8792-4883-9529-C966829AB2A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77E86148-8792-4883-9529-C966829AB2A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54670AA9-AEE4-47CB-8260-1FABFAF9AB3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54670AA9-AEE4-47CB-8260-1FABFAF9AB3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54670AA9-AEE4-47CB-8260-1FABFAF9AB3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54670AA9-AEE4-47CB-8260-1FABFAF9AB3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
