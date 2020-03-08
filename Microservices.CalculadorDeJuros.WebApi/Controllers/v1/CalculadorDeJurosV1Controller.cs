@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Microservices.CalculadorDeJuros.WebApi.Controllers.v1
 {
-    [ApiVersion("1")]
+    [Route("v{version:apiVersion}/calculaJuros")]
     public class CalculadorDeJurosV1Controller : BaseController
     {
         private readonly ICalculadorDeJurosServices _calculadorDeJurosServices;
@@ -21,14 +21,14 @@ namespace Microservices.CalculadorDeJuros.WebApi.Controllers.v1
             {
                 var calculoDeJurosDto = await _calculadorDeJurosServices.GetAsync(valorInicial, meses);
 
-                if (calculoDeJurosDto.IsValid())
+                if (calculoDeJurosDto.IsValid)
                     return Ok(calculoDeJurosDto.Resultado);
 
-                return BadRequest(calculoDeJurosDto.GetErrors());
+                return BadRequest(calculoDeJurosDto.Errors);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                return BadRequest("Não foi possível realizar o calculo solicitado, Messagem original do erro:" + e.Message);
+                return BadRequest($"Ocorreu um erro interno. Mensagem de erro: {ex.Message}");
             }
         }
     }
