@@ -1,4 +1,4 @@
-﻿using Microservices.CalculadorDeJuros.Entities;
+﻿using Microservices.CalculadorDeJuros.Domain;
 using Microservices.CalculadorDeJuros.Services.Clients;
 using System.Threading.Tasks;
 

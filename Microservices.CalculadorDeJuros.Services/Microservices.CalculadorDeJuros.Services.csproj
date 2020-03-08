@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Microservices.CalculadorDeJuros.Entities\Microservices.CalculadorDeJuros.Entities.csproj" />
+    <ProjectReference Include="..\Microservices.CalculadorDeJuros.Entities\Microservices.CalculadorDeJuros.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

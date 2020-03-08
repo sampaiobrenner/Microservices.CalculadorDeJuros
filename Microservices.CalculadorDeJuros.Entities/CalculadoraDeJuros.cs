@@ -1,7 +1,7 @@
-﻿using Microservices.CalculadorDeJuros.Entities.Base;
+﻿using Microservices.CalculadorDeJuros.Domain.Base;
 using System;
 
-namespace Microservices.CalculadorDeJuros.Entities
+namespace Microservices.CalculadorDeJuros.Domain
 {
     public class CalculadoraDeJuros : ErrorBase
     {
