@@ -12,10 +12,10 @@ COPY ["src/Microservices.CalculadorDeJuros.Domain/Microservices.CalculadorDeJuro
 RUN dotnet restore "src/Microservices.CalculadorDeJuros.WebApi/Microservices.CalculadorDeJuros.WebApi.csproj"
 COPY . .
 WORKDIR "/src/src/Microservices.CalculadorDeJuros.WebApi"
-RUN dotnet build "Microservices.CalculadorDeJuros.WebApi.csproj" -c Release -o /app/build --no-restore
+RUN dotnet build "Microservices.CalculadorDeJuros.WebApi.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "Microservices.CalculadorDeJuros.WebApi.csproj" -c Release -o /app/publish --no-restore
+RUN dotnet publish "Microservices.CalculadorDeJuros.WebApi.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
