@@ -10,9 +10,9 @@ Para configuração do client deve ser alterada a URL no appsettings
 Rotas disponíveis:                                                                    
 `/swagger/index.html`
 
-`api//v1/calculajuros`
+`api/v1/calculajuros`
 
-`api//v1//api/v{version}/showMeTheCode`
+`api/v1//api/v{version}/showMeTheCode`
 
 
 O MS de taxa de juros está disponível no link: https://github.com/sampaiobrenner/Microservices.TaxaDeJuros
