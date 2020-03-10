@@ -5,7 +5,7 @@ namespace Microservices.CalculadorDeJuros.Domain
 {
     public class CalculadoraDeJuros : ErrorBase
     {
-        public CalculadoraDeJuros(decimal valorInicial, int meses, decimal taxaDeJuros)
+        private CalculadoraDeJuros(decimal valorInicial, int meses, decimal taxaDeJuros)
         {
             SetValorInicial(valorInicial);
             SetMeses(meses);
@@ -13,11 +13,24 @@ namespace Microservices.CalculadorDeJuros.Domain
         }
 
         public int Meses { get; private set; }
-        public decimal Resultado => GetResultado();
+
         public decimal TaxaDeJuros { get; private set; }
+
         public decimal ValorInicial { get; private set; }
 
-        public void SetMeses(int meses)
+        public decimal CalcularJuros()
+        {
+            if (!IsValid) return default;
+
+            var pow = Math.Pow((double)(1 + TaxaDeJuros), Meses);
+            var result = ValorInicial * (decimal)pow;
+            return decimal.Parse(result.ToString("##.00"));
+        }
+
+        internal static CalculadoraDeJuros CreateInstance(decimal valorInicial, int meses, decimal taxaDeJuros) =>
+                    new CalculadoraDeJuros(valorInicial, meses, taxaDeJuros);
+
+        private void SetMeses(int meses)
         {
             if (default == meses)
             {
@@ -27,7 +40,7 @@ namespace Microservices.CalculadorDeJuros.Domain
             Meses = meses;
         }
 
-        public void SetTaxaDeJuros(decimal taxaDeJuros)
+        private void SetTaxaDeJuros(decimal taxaDeJuros)
         {
             if (default == taxaDeJuros)
             {
@@ -37,7 +50,7 @@ namespace Microservices.CalculadorDeJuros.Domain
             TaxaDeJuros = taxaDeJuros;
         }
 
-        public void SetValorInicial(decimal valorInicial)
+        private void SetValorInicial(decimal valorInicial)
         {
             if (default == valorInicial)
             {
@@ -45,15 +58,6 @@ namespace Microservices.CalculadorDeJuros.Domain
                 return;
             }
             ValorInicial = valorInicial;
-        }
-
-        private decimal GetResultado()
-        {
-            if (!IsValid) return default;
-
-            var pow = Math.Pow((double)(1 + TaxaDeJuros), Meses);
-            var result = ValorInicial * (decimal)pow;
-            return decimal.Parse(result.ToString("##.00"));
         }
     }
 }
