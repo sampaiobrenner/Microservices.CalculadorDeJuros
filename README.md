@@ -1,5 +1,7 @@
 # Microservices.CalculadorDeJuros
 
+[![CodeFactor](https://www.codefactor.io/repository/github/sampaiobrenner/microservices.calculadordejuros/badge)](https://www.codefactor.io/repository/github/sampaiobrenner/microservices.calculadordejuros)
+
 Para configuração do client deve ser alterada a URL no appsettings
 
 `src/Microservices.CalculadorDeJuros.WebApi/appsettings.json`     
