@@ -12,7 +12,7 @@ Rotas disponíveis:
 
 `api/v1/calculajuros`
 
-`api/v1//api/v{version}/showMeTheCode`
+`api/v1/showMeTheCode`
 
 
 O MS de taxa de juros está disponível no link: https://github.com/sampaiobrenner/Microservices.TaxaDeJuros
