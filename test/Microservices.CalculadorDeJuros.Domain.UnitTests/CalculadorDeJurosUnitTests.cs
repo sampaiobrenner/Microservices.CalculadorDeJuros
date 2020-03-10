@@ -18,7 +18,7 @@ namespace Microservices.CalculadorDeJuros.Domain.UnitTests
                 .WithTaxaDeJuros(taxaDeJuros)
                 .Build();
 
-            Assert.Equal(calculadora.CalcularJuros(), default);
+            Assert.Equal(default, calculadora.CalcularJuros());
             Assert.False(calculadora.IsValid);
         }
 
