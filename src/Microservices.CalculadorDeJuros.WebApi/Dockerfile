@@ -6,10 +6,12 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["Microservices.CalculadorDeJuros.WebApi/Microservices.CalculadorDeJuros.WebApi.csproj", "Microservices.CalculadorDeJuros.WebApi/"]
-RUN dotnet restore "Microservices.CalculadorDeJuros.WebApi/Microservices.CalculadorDeJuros.WebApi.csproj"
+COPY ["src/Microservices.CalculadorDeJuros.WebApi/Microservices.CalculadorDeJuros.WebApi.csproj", "src/Microservices.CalculadorDeJuros.WebApi/"]
+COPY ["src/Microservices.CalculadorDeJuros.Services/Microservices.CalculadorDeJuros.Services.csproj", "src/Microservices.CalculadorDeJuros.Services/"]
+COPY ["src/Microservices.CalculadorDeJuros.Domain/Microservices.CalculadorDeJuros.Domain.csproj", "src/Microservices.CalculadorDeJuros.Domain/"]
+RUN dotnet restore "src/Microservices.CalculadorDeJuros.WebApi/Microservices.CalculadorDeJuros.WebApi.csproj"
 COPY . .
-WORKDIR "/src/Microservices.CalculadorDeJuros.WebApi"
+WORKDIR "/src/src/Microservices.CalculadorDeJuros.WebApi"
 RUN dotnet build "Microservices.CalculadorDeJuros.WebApi.csproj" -c Release -o /app/build
 
 FROM build AS publish

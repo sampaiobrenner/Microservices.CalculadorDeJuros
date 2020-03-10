@@ -5,4 +5,4 @@ services:
     image: ${DOCKER_REGISTRY-}microservicescalculadordejuroswebapi
     build:
       context: .
-      dockerfile: Microservices.CalculadorDeJuros.WebApi/Dockerfile
+      dockerfile: src/Microservices.CalculadorDeJuros.WebApi/Dockerfile
