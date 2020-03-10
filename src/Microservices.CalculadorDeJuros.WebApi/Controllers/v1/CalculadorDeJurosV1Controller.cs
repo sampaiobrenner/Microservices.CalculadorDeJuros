@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Microservices.CalculadorDeJuros.WebApi.Controllers.v1
 {
-    [Route("v{version:apiVersion}/calculaJuros")]
+    [ApiVersion("1")]
     public class CalculadorDeJurosV1Controller : BaseController
     {
         private readonly ICalculadorDeJurosServices _calculadorDeJurosServices;
@@ -14,7 +14,7 @@ namespace Microservices.CalculadorDeJuros.WebApi.Controllers.v1
         public CalculadorDeJurosV1Controller(ICalculadorDeJurosServices calculadorDeJurosServices) =>
             _calculadorDeJurosServices = calculadorDeJurosServices;
 
-        [HttpGet]
+        [HttpGet("calculaJuros")]
         public async Task<IActionResult> GetAsync([FromQuery] decimal valorInicial, int meses)
         {
             try
@@ -22,7 +22,7 @@ namespace Microservices.CalculadorDeJuros.WebApi.Controllers.v1
                 var calculoDeJurosDto = await _calculadorDeJurosServices.GetAsync(valorInicial, meses);
 
                 if (calculoDeJurosDto.IsValid)
-                    return Ok(calculoDeJurosDto.Resultado);
+                    return Ok(calculoDeJurosDto.CalcularJuros());
 
                 return BadRequest(calculoDeJurosDto.Errors);
             }

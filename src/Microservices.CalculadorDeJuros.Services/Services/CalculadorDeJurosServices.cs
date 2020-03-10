@@ -1,4 +1,5 @@
 ﻿using Microservices.CalculadorDeJuros.Domain;
+using Microservices.CalculadorDeJuros.Domain.Builders;
 using Microservices.CalculadorDeJuros.Services.Clients;
 using System.Threading.Tasks;
 
@@ -12,9 +13,15 @@ namespace Microservices.CalculadorDeJuros.Services.Services
 
         public async Task<CalculadoraDeJuros> GetAsync(decimal valorInicial, int meses)
         {
-            var taxaDeJuros = await _client.GetAsync();
+            var taxaDeJurosDto = await _client.GetAsync();
 
-            return new CalculadoraDeJuros(valorInicial, meses, taxaDeJuros.Valor);
+            var calculadoraDeJuros = new CalculadoraDeJurosBuilder()
+                .WithMeses(meses)
+                .WithTaxaDeJuros(taxaDeJurosDto.Valor)
+                .WithValorInicial(valorInicial)
+                .Build();
+
+            return calculadoraDeJuros;
         }
     }
 }

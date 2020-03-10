@@ -3,13 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.CalculadorDeJuros.WebApi", "Microservices.CalculadorDeJuros.WebApi\Microservices.CalculadorDeJuros.WebApi.csproj", "{32107769-A495-4245-9056-E7031D691422}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.CalculadorDeJuros.WebApi", "src\Microservices.CalculadorDeJuros.WebApi\Microservices.CalculadorDeJuros.WebApi.csproj", "{32107769-A495-4245-9056-E7031D691422}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.CalculadorDeJuros.Services", "Microservices.CalculadorDeJuros.Services\Microservices.CalculadorDeJuros.Services.csproj", "{27818912-3D1C-4E81-A40E-682F30BA2551}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.CalculadorDeJuros.Services", "src\Microservices.CalculadorDeJuros.Services\Microservices.CalculadorDeJuros.Services.csproj", "{27818912-3D1C-4E81-A40E-682F30BA2551}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.CalculadorDeJuros.Domain", "Microservices.CalculadorDeJuros.Entities\Microservices.CalculadorDeJuros.Domain.csproj", "{77E86148-8792-4883-9529-C966829AB2A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.CalculadorDeJuros.Domain", "src\Microservices.CalculadorDeJuros.Domain\Microservices.CalculadorDeJuros.Domain.csproj", "{77E86148-8792-4883-9529-C966829AB2A3}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{54670AA9-AEE4-47CB-8260-1FABFAF9AB3D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.CalculadorDeJuros.Domain.UnitTests", "test\Microservices.CalculadorDeJuros.Domain.UnitTests\Microservices.CalculadorDeJuros.Domain.UnitTests.csproj", "{AB0D02CF-A485-4FEA-A29A-C448BF5ABCD4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FF987505-45E9-4A4E-8A44-75ADDE685FAF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A28EAB64-1145-4714-BCC3-77166C023367}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +39,19 @@ Global
 		{54670AA9-AEE4-47CB-8260-1FABFAF9AB3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54670AA9-AEE4-47CB-8260-1FABFAF9AB3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54670AA9-AEE4-47CB-8260-1FABFAF9AB3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB0D02CF-A485-4FEA-A29A-C448BF5ABCD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB0D02CF-A485-4FEA-A29A-C448BF5ABCD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB0D02CF-A485-4FEA-A29A-C448BF5ABCD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB0D02CF-A485-4FEA-A29A-C448BF5ABCD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{32107769-A495-4245-9056-E7031D691422} = {FF987505-45E9-4A4E-8A44-75ADDE685FAF}
+		{27818912-3D1C-4E81-A40E-682F30BA2551} = {FF987505-45E9-4A4E-8A44-75ADDE685FAF}
+		{77E86148-8792-4883-9529-C966829AB2A3} = {FF987505-45E9-4A4E-8A44-75ADDE685FAF}
+		{AB0D02CF-A485-4FEA-A29A-C448BF5ABCD4} = {A28EAB64-1145-4714-BCC3-77166C023367}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DA450B11-F73F-4B22-9EE3-94BECBBD333F}
