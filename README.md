@@ -4,15 +4,15 @@
 
 ## Para configuração do client deve ser alterada a URL no appsettings
 ```
-src/Microservices.CalculadorDeJuros.WebApi/appsettings.json`     
-src/Microservices.CalculadorDeJuros.WebApi/appsettings.Development.json`
+src/Microservices.CalculadorDeJuros.WebApi/appsettings.json
+src/Microservices.CalculadorDeJuros.WebApi/appsettings.Development.json
 ```
 
 ### Rotas disponíveis:
 ```
-/swagger/index.html`
-api/v1/calculajuros`
-api/v1/showMeTheCode`
+/swagger/index.html
+api/v1/calculajuros
+api/v1/showMeTheCode
 ```
 
 ### O MS de taxa de juros está disponível no link: 
