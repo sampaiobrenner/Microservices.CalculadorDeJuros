@@ -17,7 +17,10 @@ namespace Microservices.CalculadorDeJuros.WebApi
     {
         private readonly IConfiguration _config;
 
-        public Startup(IConfiguration config) => _config = config;
+        public Startup(IConfiguration config) 
+        {
+            _config = config;
+        } 
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
